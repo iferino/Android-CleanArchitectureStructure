@@ -13,6 +13,7 @@ ext {
     rxJava2AndroidVersion = '2.0.1'
     butterKnifeVersion = '8.4.0'
     daggerVersion = '2.12'
+    jetbrainsAnnotationVersion = "15.0"
 
 
     appDependencies = [
@@ -26,7 +27,9 @@ ext {
             dagger              : "com.google.dagger:dagger:${daggerVersion}",
             daggerCompiler      : "com.google.dagger:dagger-compiler:${daggerVersion}",
             daggerProcessor     : "com.google.dagger:dagger-android-processor:${daggerVersion}",
-            daggerAndroid       : "com.google.dagger:dagger-android-support:${daggerVersion}"
+            daggerAndroid       : "com.google.dagger:dagger-android-support:${daggerVersion}",
+            //NotNull annotations
+            jetbrainsAnnotations: "org.jetbrains:annotations:${jetbrainsAnnotationVersion}"
     ]
 
     presentationDependencies = [
@@ -35,7 +38,9 @@ ext {
             rxJava2Android    : "io.reactivex.rxjava2:rxandroid:${rxJava2AndroidVersion}",
             //Dagger
             dagger            : "com.google.dagger:dagger:${daggerVersion}",
-            daggerCompiler    : "com.google.dagger:dagger-compiler:${daggerVersion}"
+            daggerCompiler    : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            //NotNull annotations
+            jetbrainsAnnotations: "org.jetbrains:annotations:${jetbrainsAnnotationVersion}"
     ]
 
     domainDependencies = [
@@ -44,5 +49,7 @@ ext {
             //Dagger
             dagger              : "com.google.dagger:dagger:${daggerVersion}",
             daggerCompiler      : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            //NotNull annotations
+            jetbrainsAnnotations: "org.jetbrains:annotations:${jetbrainsAnnotationVersion}"
     ]
 }
