@@ -14,7 +14,9 @@ ext {
     butterKnifeVersion = '8.4.0'
     daggerVersion = '2.12'
     jetbrainsAnnotationVersion = "15.0"
-
+    streamAnnimonVersion = '1.1.4'
+    retrofitVersion = '2.3.0'
+    okHttpVersion = '3.8.0'
 
     appDependencies = [
             //RX
@@ -49,7 +51,15 @@ ext {
             //Dagger
             dagger              : "com.google.dagger:dagger:${daggerVersion}",
             daggerCompiler      : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            //aNNiMON
+            streamAnnimon       : "com.annimon:stream:${streamAnnimonVersion}",
+            //GSON
+            converterGson       : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            //OkHttp
+            okHttp              : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
             //NotNull annotations
-            jetbrainsAnnotations: "org.jetbrains:annotations:${jetbrainsAnnotationVersion}"
+            jetbrainsAnnotations: "org.jetbrains:annotations:${jetbrainsAnnotationVersion}",
+            //kotlin
+            kotlin              : "org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}",
     ]
 }
