@@ -17,6 +17,9 @@ ext {
     streamAnnimonVersion = '1.1.4'
     retrofitVersion = '2.3.0'
     okHttpVersion = '3.8.0'
+    logginInterceptorVersion = '3.8.0'
+    picassoDownloader = '1.0.2'
+
 
     appDependencies = [
             //RX
@@ -60,6 +63,26 @@ ext {
             //NotNull annotations
             jetbrainsAnnotations: "org.jetbrains:annotations:${jetbrainsAnnotationVersion}",
             //kotlin
-            kotlin              : "org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}",
+            kotlin              : "org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}"
+    ]
+
+    dataDependencies = [
+            //RX
+            rxJava2             : "io.reactivex.rxjava2:rxjava:${rxJava2Version}",
+            //Dagger
+            dagger              : "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler      : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            //GSON
+            converterGson       : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            //NotNull annotations
+            jetbrainsAnnotations: "org.jetbrains:annotations:${jetbrainsAnnotationVersion}",
+            //Retrofit
+            converterSimpleXML  : "com.squareup.retrofit2:converter-simplexml:${retrofitVersion}",
+            adapterRXJava2      : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+            logginInterceptor   : "com.squareup.okhttp3:logging-interceptor:${logginInterceptorVersion}",
+            //Picasso
+            picassoDownloader   : "com.jakewharton.picasso:picasso2-okhttp3-downloader:${picassoDownloader}",
+            //kotlin
+            kotlin              : "org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}"
     ]
 }
