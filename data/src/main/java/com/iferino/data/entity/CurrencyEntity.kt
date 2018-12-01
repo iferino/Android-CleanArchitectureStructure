@@ -2,7 +2,6 @@ package com.iferino.data.entity
 
 import com.google.gson.annotations.SerializedName
 
-
 data class CurrencyEntity(
         @SerializedName("code")
         val code: String,

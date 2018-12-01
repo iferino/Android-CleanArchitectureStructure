@@ -41,7 +41,7 @@ data class CountryEntity(
     val demonym: String,
 
     @SerializedName("area")
-    val area: Int,
+    val area: Float,
 
     @SerializedName("gini")
     val gini: Float,
@@ -59,5 +59,20 @@ data class CountryEntity(
     val numericCode: String,
 
     @SerializedName("currencies")
-    val currencies: List<CurrencyEntity>
+    val currencies: List<CurrencyEntity>,
+
+    @SerializedName("languages")
+    val languages: List<LanguageEntity>,
+
+    @SerializedName("translations")
+    val translations: TranslationEntity,
+
+    @SerializedName("flag")
+    val flag: String,
+
+    @SerializedName("regionalBlocs")
+    val regionalBlocs: List<RegionalBlocEntity>,
+
+    @SerializedName("cioc")
+    val cioc: String
 )
