@@ -2,7 +2,7 @@ package com.iferino.data.network.di;
 
 
 import com.iferino.data.network.ApiClient;
-import com.iferino.data.network.ApiService;
+import com.iferino.data.network.CountryApiService;
 
 import javax.inject.Singleton;
 
@@ -14,8 +14,8 @@ public class ServiceModule {
 
     @Provides
     @Singleton
-    ApiService provideApiService(ApiClient apiClient) {
-        return apiClient.createService(ApiService.class);
+    CountryApiService provideApiService(ApiClient apiClient) {
+        return apiClient.createService(CountryApiService.class);
     }
 }
 

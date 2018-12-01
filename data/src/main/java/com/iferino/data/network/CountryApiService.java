@@ -8,7 +8,7 @@ import java.util.List;
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 
-public interface ApiService {
+public interface CountryApiService {
 
     @GET("rest/v2/all")
     Observable<List<CountryEntity>> getCountryList();

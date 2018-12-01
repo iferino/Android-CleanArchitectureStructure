@@ -20,18 +20,6 @@ ext {
     picassoDownloader = '1.0.2'
     logginInterceptorVersion = '3.8.0'
 
-//    okhttp1_version = "2.7.5"
-//    gson_fire_version = "1.8.0"
-//    jmrtd_version = "0.5.13"
-//    jnbis_version = "1.1.0"
-//    scuba_android_version = "0.0.9"
-//    jj2000_version = "5.2"
-//    spongycastle_version = "1.54.0.0"
-//    gson_version = "2.3.1"
-//    googleApiVersion = '1.23.0'
-//    bouncyCastle_version = "1.59"
-//    apacheCommonsLang3Version = "3.6"
-//    supportVersion = '27.1.0'
 
     appDependencies = [
             //RX
@@ -47,21 +35,9 @@ ext {
             daggerAndroid       : "com.google.dagger:dagger-android-support:${daggerVersion}",
             //NotNull annotations
             jetbrainsAnnotations: "org.jetbrains:annotations:${jetbrainsAnnotationVersion}",
-//            //Beidk
-//            okhttp              : "com.squareup.okhttp:okhttp:${okhttp1_version}",
-//            gsonFire            : "io.gsonfire:gson-fire:${gson_fire_version}",
-//            loggingInterceptor  : "com.squareup.okhttp:logging-interceptor:${okhttp1_version}",
-//            jmrtd               : "org.jmrtd:jmrtd:$jmrtd_version",
-//            jnbis               : "com.github.mhshams:jnbis:$jnbis_version",
-//            scuba               : "net.sf.scuba:scuba-sc-android:$scuba_android_version",
-//            jj2000              : "edu.ucar:jj2000:$jj2000_version",
-//            spongycastle        : "com.madgag.spongycastle:prov:$spongycastle_version",
-//            gson                : "com.google.code.gson:gson:$gson_version",
-//            googleHttpClient    : "com.google.http-client:google-http-client-android:$googleApiVersion",
-//            googleClientJackson : "com.google.http-client:google-http-client-jackson2:$googleApiVersion",
-//            bouncyCastle        : "org.bouncycastle:bcprov-jdk15on:$bouncyCastle_version",
-//            supportAnnotations  : "com.android.support:support-annotations:${supportVersion}",
-//            apacheCommonsLang3  : "org.apache.commons:commons-lang3:${apacheCommonsLang3Version}",
+            //RX
+            rxJava2             : "io.reactivex.rxjava2:rxjava:${rxJava2Version}",
+            rxJava2Android      : "io.reactivex.rxjava2:rxandroid:${rxJava2AndroidVersion}",
     ]
 
     presentationDependencies = [

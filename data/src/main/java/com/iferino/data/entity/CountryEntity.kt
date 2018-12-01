@@ -2,6 +2,7 @@ package com.iferino.data.entity;
 
 
 import com.google.gson.annotations.SerializedName
+import com.iferino.domain.entity.Country
 
 data class CountryEntity(
     @SerializedName("name")
@@ -75,4 +76,6 @@ data class CountryEntity(
 
     @SerializedName("cioc")
     val cioc: String
-)
+) {
+    fun toDomain() = Country(name)
+}

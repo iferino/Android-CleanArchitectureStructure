@@ -2,6 +2,6 @@ package com.iferino.domain.executor
 
 import io.reactivex.Scheduler
 
-interface PostExecutionThread {
+class ThreadExecutor (
     val scheduler: Scheduler
-}
+)

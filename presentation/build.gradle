@@ -24,11 +24,14 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     def presentationDependencies = rootProject.ext.presentationDependencies
-
     //dagger
     compileOnly presentationDependencies.dagger
     kapt presentationDependencies.daggerCompiler
@@ -36,12 +39,10 @@ dependencies {
     implementation presentationDependencies.rxJava2
     implementation presentationDependencies.rxJava2Android
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    compile project(path: ':data')
+    implementation project(path: ':domain')
 }
