@@ -35,6 +35,16 @@ dependencies {
     implementation(appDependencies.daggerAndroid) {
         exclude group: 'com.google.code.findbugs'
     }
+//    // Beidk dependencies
+//    implementation appDependencies.okhttp
+//    implementation appDependencies.gsonFire
+//    implementation appDependencies.loggingInterceptor
+//    implementation appDependencies.jmrtd
+//    implementation appDependencies.jnbis
+//    implementation appDependencies.scuba
+//    implementation appDependencies.jj2000
+//    implementation appDependencies.spongycastle
+
 
     //NotNull annotations
     compileOnly appDependencies.jetbrainsAnnotations
@@ -48,4 +58,5 @@ dependencies {
     implementation 'com.android.support:support-annotations:27.1.1'
 
     implementation project(path: ':presentation')
+    compile project(path: ':data')
 }

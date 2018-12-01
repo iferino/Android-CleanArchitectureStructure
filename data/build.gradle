@@ -24,18 +24,40 @@ android {
         }
     }
 
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
-    def presentationDependencies = rootProject.ext.presentationDependencies
 
+    def dataDependencies = rootProject.ext.dataDependencies
     //dagger
-    compileOnly presentationDependencies.dagger
-    kapt presentationDependencies.daggerCompiler
+    compileOnly dataDependencies.dagger
+    kapt dataDependencies.daggerCompiler
+    //GSON
+    implementation dataDependencies.converterGson
+
     //rxjava
-    implementation presentationDependencies.rxJava2
-    implementation presentationDependencies.rxJava2Android
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation dataDependencies.rxJava2
+    implementation dataDependencies.adapterRXJava2
+
+    //Picasso
+    implementation dataDependencies.picassoDownloader
+
+    //Retrofit
+    implementation(dataDependencies.converterSimpleXML) {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
+    implementation dataDependencies.logginInterceptor
+
+
+    //Kotlin
+    implementation dataDependencies.kotlin
+
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -43,5 +65,4 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    compile project(path: ':data')
 }
